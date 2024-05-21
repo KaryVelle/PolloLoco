@@ -36,6 +36,7 @@ public class HandleDeath : MonoBehaviour
         polloScream.Play();
         player.Move(new Vector3(xForce, yForce, 0 + zForce));
         StartCoroutine(Respawn());
+        cinemachineVc.Follow = null;
     }
 
     public void Die()

@@ -13,6 +13,7 @@ namespace Mirror
 
         public int offsetX;
         public int offsetY;
+        
 
         void Awake()
         {
@@ -61,7 +62,7 @@ namespace Mirror
 #else
                 // Server + Client
                 if (GUILayout.Button("Host (Server + Client)"))
-                    manager.StartHost();
+                    manager.StartHost();  
 #endif
 
                 // Client + IP (+ PORT)

@@ -7,13 +7,10 @@ using StarterAssets;
 
 public class Turbo : MonoBehaviour
 {
-    [SerializeField] public CharacterController player;
-    [SerializeField] public PlayerMovement charController;
-    [SerializeField] private Collider col;
+    private PlayerMovement charController;
     private Coroutine turbocor;
     void Start()
     {
-        charController = player.GetComponent<PlayerMovement>();
         turbocor = null;
     }
 
@@ -21,6 +18,7 @@ public class Turbo : MonoBehaviour
     {
         if (turbocor == null)
         {
+            charController = other.GetComponent<PlayerMovement>();
             StartCoroutine(Tur());
         }
     }
