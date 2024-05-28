@@ -147,6 +147,8 @@ namespace StarterAssets
             base.OnStartAuthority();
             PlayerInput playerInput = GetComponent<PlayerInput>();
             playerInput.enabled = true;
+            GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
+            GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().LookAt = transform.GetChild(0).transform;
         }
         private void Start()
         {

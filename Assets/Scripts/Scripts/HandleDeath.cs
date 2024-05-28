@@ -19,7 +19,7 @@ public class HandleDeath : MonoBehaviour
     [SerializeField] private GameObject playerToMove;
 
     [SerializeField] private CinemachineVirtualCamera cinemachineVc;
-    [SerializeField] private GameObject playerToFollow;
+    [SerializeField] private Transform playerToFollow;
 
     [SerializeField] private Image animImg;
     // Start is called before the first frame update
@@ -28,6 +28,7 @@ public class HandleDeath : MonoBehaviour
         cinemachineVc = FindObjectOfType<CinemachineVirtualCamera>();
         animImg = GameObject.FindWithTag("DeathAnim").GetComponent<Image>();
         player =  playerToMove.GetComponent<CharacterController>();
+        playerToFollow = cinemachineVc.Follow;
     }
 
     public void AddForce()
@@ -58,11 +59,11 @@ public class HandleDeath : MonoBehaviour
             yield return null; 
         }
     
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         
         player.enabled = false;
         playerToMove.transform.position = checker.currentPointLoad.position;
-        cinemachineVc.Follow = playerToFollow.transform;
+        cinemachineVc.Follow = playerToFollow;
         
         while (animImg.fillAmount > 0)
         {
