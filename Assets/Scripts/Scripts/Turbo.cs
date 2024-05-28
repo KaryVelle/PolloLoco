@@ -25,11 +25,11 @@ public class Turbo : MonoBehaviour
 
     private IEnumerator Tur()
     {
-        charController.SprintSpeed *= 2;
-        charController.MoveSpeed *= 2;
-        yield return new WaitForSeconds(1f);
+        charController.SprintSpeed = 15;
+        charController.MoveSpeed = 6;
+        yield return new WaitForSeconds(3f);
         turbocor = null;
-        charController.SprintSpeed /= 2;
-        charController.MoveSpeed /= 2;
+        charController.SprintSpeed = 6;
+        charController.MoveSpeed = 3;
     }
 }

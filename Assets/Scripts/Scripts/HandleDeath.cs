@@ -22,6 +22,8 @@ public class HandleDeath : MonoBehaviour
     [SerializeField] private Transform playerToFollow;
 
     [SerializeField] private Image animImg;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class HandleDeath : MonoBehaviour
         animImg = GameObject.FindWithTag("DeathAnim").GetComponent<Image>();
         player =  playerToMove.GetComponent<CharacterController>();
         playerToFollow = cinemachineVc.Follow;
+       
     }
 
     public void AddForce()
@@ -45,6 +48,7 @@ public class HandleDeath : MonoBehaviour
         polloScream.Play();
         StartCoroutine(Respawn());
         cinemachineVc.Follow = null;
+       
     }
 
     private IEnumerator Respawn()
@@ -70,7 +74,6 @@ public class HandleDeath : MonoBehaviour
             animImg.fillAmount -= fillSpeed * Time.deltaTime; 
             yield return null; 
         }
-        
         player.enabled = true;
     }
 }

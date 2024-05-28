@@ -6,6 +6,7 @@ using UnityEngine;
 public class KillPollo : MonoBehaviour
 {
     private HandleDeath _handleDeath;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
