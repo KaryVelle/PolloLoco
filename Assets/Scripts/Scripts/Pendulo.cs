@@ -12,8 +12,9 @@ public class Pendulo : MonoBehaviour
     public float direction = 1;
     private Quaternion startPos;
     public  Quaternion rot;
-
-    [SerializeField] private HandleDeath _handleDeath;
+    
+ 
+   private HandleDeath _handleDeath;
     
     void Start()
     {
@@ -31,6 +32,7 @@ public class Pendulo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+          _handleDeath = other.GetComponent<HandleDeath>();
             Debug.Log("Player");
             _handleDeath.AddForce();
             

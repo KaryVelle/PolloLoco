@@ -19,15 +19,19 @@ public class HandleDeath : MonoBehaviour
     [SerializeField] private GameObject playerToMove;
 
     [SerializeField] private CinemachineVirtualCamera cinemachineVc;
-    [SerializeField] private GameObject playerToFollow;
+    [SerializeField] private Transform playerToFollow;
 
     [SerializeField] private Image animImg;
+
+   
     // Start is called before the first frame update
     void Start()
     {
         cinemachineVc = FindObjectOfType<CinemachineVirtualCamera>();
         animImg = GameObject.FindWithTag("DeathAnim").GetComponent<Image>();
         player =  playerToMove.GetComponent<CharacterController>();
+        playerToFollow = cinemachineVc.Follow;
+       
     }
 
     public void AddForce()
@@ -36,6 +40,7 @@ public class HandleDeath : MonoBehaviour
         polloScream.Play();
         player.Move(new Vector3(xForce, yForce, 0 + zForce));
         StartCoroutine(Respawn());
+        cinemachineVc.Follow = null;
     }
 
     public void Die()
@@ -43,6 +48,7 @@ public class HandleDeath : MonoBehaviour
         polloScream.Play();
         StartCoroutine(Respawn());
         cinemachineVc.Follow = null;
+       
     }
 
     private IEnumerator Respawn()
@@ -57,18 +63,17 @@ public class HandleDeath : MonoBehaviour
             yield return null; 
         }
     
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         
         player.enabled = false;
         playerToMove.transform.position = checker.currentPointLoad.position;
-        cinemachineVc.Follow = playerToFollow.transform;
+        cinemachineVc.Follow = playerToFollow;
         
         while (animImg.fillAmount > 0)
         {
             animImg.fillAmount -= fillSpeed * Time.deltaTime; 
             yield return null; 
         }
-        
         player.enabled = true;
     }
 }
