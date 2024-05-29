@@ -9,6 +9,11 @@ TagManager:
   - Checkpoint
   - Die
   - DeathAnim
+  - Checkpoint7
+  - Goal
+  - FirstPlace
+  - SecondPlace
+  - ThirdPlace
   layers:
   - Default
   - TransparentFX

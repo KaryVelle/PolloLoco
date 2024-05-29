@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using StarterAssets;
 using UnityEngine;
 
-public class KillPollo : MonoBehaviour
+public class KillPollo : NetworkBehaviour
 {
     private HandleDeath _handleDeath;
     
