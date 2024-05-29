@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
-
 namespace Mirror
 {
     public enum PlayerSpawnMethod { Random, RoundRobin }
@@ -157,6 +156,7 @@ namespace Mirror
 
         /// <summary>True if the server is running or client is connected/connecting.</summary>
         public bool isNetworkActive => NetworkServer.active || NetworkClient.active;
+        public int players;
 
         // TODO remove this
         // internal for tests
@@ -1385,6 +1385,7 @@ namespace Mirror
         // The default implementation for this function creates a new player object from the playerPrefab.
         public virtual void OnServerAddPlayer(NetworkConnectionToClient conn)
         {
+            players++;
             Transform startPos = GetStartPosition();
             GameObject player = startPos != null
                 ? Instantiate(playerPrefab, startPos.position, startPos.rotation)

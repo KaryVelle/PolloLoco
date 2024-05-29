@@ -1717,6 +1717,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  lobby: {fileID: 2089380174444932298, guid: 5e53b77266431964c94bf4826cef7d1b, type: 3}
 --- !u!1 &3738472046227513476
 GameObject:
   m_ObjectHideFlags: 0
