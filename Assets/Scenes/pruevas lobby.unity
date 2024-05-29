@@ -2727,10 +2727,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &90594709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5862,6 +5864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &281341222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,6 +7017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!4 &312616188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4810739106270025026, guid: 53f1dafbcf9f62c4b8b33d9c3df5e12a,
@@ -8441,6 +8449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &350703076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10424,6 +10435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &445918565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11404,10 +11418,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &483881639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20923,10 +20939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &820912847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24463,6 +24481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!65 &959776961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27408,10 +27429,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &1090809363
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27973,10 +27996,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &1110694177
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33624,6 +33649,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!1001 &1307769179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39189,6 +39217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!1001 &1528928045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44986,6 +45017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &1767110843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46903,6 +46937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!1001 &1813871145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47135,6 +47172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &1818297102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47689,6 +47729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!4 &1859231884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5585791246179151229, guid: 703d51c7980b3ca47ae97be302d7bbdc,
@@ -51308,10 +51351,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3311c6a38c7ed4abda7b6b1e4b3ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   move: 1.5
   speed: 1
   direction: 1
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!64 &1960269753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -54532,6 +54577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!114 &2085752268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55789,6 +55837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea570b8f7517d4419ccf41b286c0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
 --- !u!1001 &2122574494
 PrefabInstance:
   m_ObjectHideFlags: 0

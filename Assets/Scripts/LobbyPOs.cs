@@ -23,10 +23,9 @@ public class LobbyPOs : NetworkBehaviour
 
     public void MovePLayer(GameObject player)
     {
-            player.transform.position = polloPosition[polloOcup].position;
+        player.transform.position = polloPosition[polloOcup].position;
     }
 
-    [Server]
     public void AddPlayer(GameObject player)
     {
         // Añade el jugador al arreglo de jugadores y actualiza su posición

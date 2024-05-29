@@ -23,6 +23,8 @@ public class HandleDeath : MonoBehaviour
 
     [SerializeField] private Image animImg;
 
+    public bool isready = false;
+
    
     // Start is called before the first frame update
     void Start()

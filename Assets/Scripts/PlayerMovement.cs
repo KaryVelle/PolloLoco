@@ -75,6 +75,8 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        public LobbyPOs lobby;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -129,6 +131,8 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            _controller = GetComponent<CharacterController>();
+            lobby = FindObjectOfType<LobbyPOs>();
         }
 
         public override void OnStartLocalPlayer()
@@ -142,10 +146,13 @@ namespace StarterAssets
         public override void OnStartAuthority()
         {
             base.OnStartAuthority();
+            _controller.enabled = false;
+            lobby.MovePLayer(this.gameObject);
             PlayerInput playerInput = GetComponent<PlayerInput>();
             playerInput.enabled = true;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().LookAt = transform.GetChild(0).transform;
+            _controller.enabled = true;
         }
 
         private void Start()
