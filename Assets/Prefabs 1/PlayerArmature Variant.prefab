@@ -429,6 +429,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1531267564308767398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401400263916974624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c8bc681dbb33543b835010d90d2016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastPointTransform: {fileID: 0}
+  currentTransform: {fileID: 0}
+  laps: 0
+  winners: []
+  handleWin: {fileID: 0}
 --- !u!114 &1654570525706479731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,20 +536,6 @@ MonoBehaviour:
   rotationSensitivity: 0.01
   positionPrecision: 0.01
   scalePrecision: 0.01
---- !u!114 &4238298085901283619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401400263916974624}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c8bc681dbb33543b835010d90d2016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastPointTransform: {fileID: 0}
-  currentTransform: {fileID: 0}
 --- !u!114 &6438184291464619176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,21 +631,7 @@ MonoBehaviour:
   checkpoints: []
   currentPointLoad: {fileID: 0}
   lastPointLoad: {fileID: 0}
-  metaCross: 
---- !u!114 &1095030637709741980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401400263916974624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c8bc681dbb33543b835010d90d2016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastPointTransform: {fileID: 0}
-  currentTransform: {fileID: 0}
+  _goalChecker: {fileID: 0}
 --- !u!143 &401400263916974634 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 4416926081852918491, guid: 64dce48905ffd9b4293e595fa6941544,

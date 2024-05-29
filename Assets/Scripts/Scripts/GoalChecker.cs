@@ -8,16 +8,9 @@ public class GoalChecker : MonoBehaviour
     private CheckChecker _checker;
     [SerializeField] private Transform lastPointTransform;
     [SerializeField] private Transform currentTransform;
-
-    [SerializeField] private Transform firstPlace;
-    [SerializeField] private Transform secondPlace;
-    [SerializeField] private Transform thirdPlace;
-
-
+    
     [SerializeField] private int laps;
-
-    [SerializeField] private List<GameObject> winners;
-
+    
     [SerializeField] private HandleWin handleWin;
 
     private void Start()
@@ -34,13 +27,15 @@ public class GoalChecker : MonoBehaviour
             _checker.currentPointLoad == currentTransform)
         {
            CountLaps();
+           Debug.Log("Meta");
         }
     }
 
     private void CountLaps()
     {
         laps += 1;
-        if (laps == 3)
+        Debug.Log(laps);
+        if (laps == 1)
         {
            handleWin.GetWinners(gameObject);
         }
