@@ -16774,17 +16774,17 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.711617
+      value: 69.9203
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7317785
+      value: 3.9428425
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.43223
+      value: 33.915558
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -19653,7 +19653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1170229434}
-  m_PathPosition: 0.3362912
+  m_PathPosition: 12.62463
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: -6.67}
   m_XDamping: 0
@@ -24080,6 +24080,8 @@ MonoBehaviour:
   secondPlaceTransform: {fileID: 546071617}
   thirdPlaceTransform: {fileID: 538072418}
   vcPodium: {fileID: 1012569288}
+  _virtualCameraGameObject: {fileID: 0}
+  vc: {fileID: 0}
 --- !u!1001 &905017926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57611,7 +57613,8 @@ MonoBehaviour:
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 401400263916974624, guid: 25d3b77bca2704b4595ba771d2a9d6c4, type: 3}
   exceptionsDisconnect: 1
   snapshotSettings:
     bufferTimeMultiplier: 2
@@ -57627,6 +57630,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
+  players: 0
 --- !u!4 &2113829034
 Transform:
   m_ObjectHideFlags: 0

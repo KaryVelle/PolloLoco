@@ -132,7 +132,7 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
             _controller = GetComponent<CharacterController>();
-            lobby = FindObjectOfType<LobbyPOs>();
+            _playerInput = GetComponent<PlayerInput>();
         }
 
         public override void OnStartLocalPlayer()
@@ -141,18 +141,18 @@ namespace StarterAssets
                 transform.GetChild(0).transform;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().LookAt =
                 transform.GetChild(0).transform;
+            _playerInput.enabled = true;
+            _controller.enabled = true;
         }
 
         public override void OnStartAuthority()
         {
             base.OnStartAuthority();
-            _controller.enabled = false;
-            lobby.MovePLayer(this.gameObject);
-            PlayerInput playerInput = GetComponent<PlayerInput>();
-            playerInput.enabled = true;
+            _playerInput.enabled = true;
+            _controller.enabled = true;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().LookAt = transform.GetChild(0).transform;
-            _controller.enabled = true;
+           
         }
 
         private void Start()
