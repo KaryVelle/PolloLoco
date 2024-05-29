@@ -15,6 +15,7 @@ TagManager:
   - SecondPlace
   - ThirdPlace
   - PodiumCam
+  - Destroy
   layers:
   - Default
   - TransparentFX
