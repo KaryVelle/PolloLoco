@@ -20,6 +20,9 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
         [SerializeField] private TMP_Text characterNameText = default;
         [SerializeField] private float turnSpeed = 90f;
         [SerializeField] private Character[] characters = default;
+        [SerializeField] private GameObject destroy;
+        [SerializeField] private GameObject destroy2;
+       
 
         private int currentCharacterIndex = 0;
         private List<GameObject> characterInstances = new List<GameObject>();
@@ -52,13 +55,17 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
             characterInstances[currentCharacterIndex].SetActive(true);
             characterNameText.text = characters[currentCharacterIndex].CharacterName;
-            var destroy = GameObject.FindGameObjectWithTag("Destroy");
+           
             Destroy(destroy);
             characterSelectDisplay.SetActive(true);
         }
 
         private void Update()
         {
+            destroy = GameObject.FindGameObjectWithTag("Destroy");
+            destroy2 = GameObject.FindGameObjectWithTag("Destroy");
+           Destroy(destroy2);
+            Destroy(destroy);
             characterPreviewParent.RotateAround(
                 characterPreviewParent.position,
                 characterPreviewParent.up,
