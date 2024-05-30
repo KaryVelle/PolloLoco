@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41752cee08f91742890500bc75250ec, type: 3}
+  m_Name: PolloVerdeMiku
+  m_EditorClassIdentifier: 
+  characterName: MikuPollo
+  characterPreviewPrefab: {fileID: 4193883416266599969, guid: de95577446c2aa440834726accc33de4,
+    type: 3}
+  gameplayCharacterPrefab: {fileID: 401400263916974624, guid: ac3e58bde310e844a82355560cb3f0a3,
+    type: 3}

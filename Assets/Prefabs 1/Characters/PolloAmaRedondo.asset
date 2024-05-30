@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41752cee08f91742890500bc75250ec, type: 3}
+  m_Name: PolloAmaRedondo
+  m_EditorClassIdentifier: 
+  characterName: Yema
+  characterPreviewPrefab: {fileID: 4193883416266599969, guid: a64dea1ac47c28640a0cd26f0cb50f61,
+    type: 3}
+  gameplayCharacterPrefab: {fileID: 401400263916974624, guid: a04bb95d88e3a454d8011faa66e0a735,
+    type: 3}

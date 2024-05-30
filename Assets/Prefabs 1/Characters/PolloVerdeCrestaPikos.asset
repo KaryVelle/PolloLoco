@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41752cee08f91742890500bc75250ec, type: 3}
+  m_Name: PolloVerdeCrestaPikos
+  m_EditorClassIdentifier: 
+  characterName: Edgar
+  characterPreviewPrefab: {fileID: 4193883416266599969, guid: 792133685a5fea4468ef0df19d37e73d,
+    type: 3}
+  gameplayCharacterPrefab: {fileID: 401400263916974624, guid: 6816eebc4e642e047b488aead96acf92,
+    type: 3}

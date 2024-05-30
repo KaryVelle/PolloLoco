@@ -2,6 +2,9 @@
 using Mirror;
 using TMPro;
 using UnityEngine;
+using System.Collections;
+using Cinemachine;
+using Cinemachine;
 
 namespace DapperDino.Mirror.Tutorials.CharacterSelection
 {
@@ -22,13 +25,17 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
         [SerializeField] private Character[] characters = default;
         [SerializeField] private GameObject destroy;
         [SerializeField] private GameObject destroy2;
-       
+
+        [SerializeField] private GameObject startCamGameObject;
+        [SerializeField] private CinemachineVirtualCamera startCamVc;
 
         private int currentCharacterIndex = 0;
         private List<GameObject> characterInstances = new List<GameObject>();
 
         void Start()
         {
+            startCamGameObject = GameObject.FindGameObjectWithTag("StartCam");
+            startCamVc = startCamGameObject.GetComponent<CinemachineVirtualCamera>();
             Debug.Log("PlayerController Start: " + netId + " isLocalPlayer: " + isLocalPlayer);
             if (isLocalPlayer)
             {
@@ -40,6 +47,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
         public override void OnStartClient()
         {
+            StartCoroutine(StartGame());
             if (characterPreviewParent.childCount == 0)
             {
                 foreach (var character in characters)
@@ -110,6 +118,12 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
             characterInstances[currentCharacterIndex].SetActive(true);
             characterNameText.text = characters[currentCharacterIndex].CharacterName;
+        }
+
+        private IEnumerator StartGame()
+        {
+            startCamGameObject.SetActive(false);
+            yield return new WaitForSeconds(5);
         }
     }
 }
