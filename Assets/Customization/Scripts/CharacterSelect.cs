@@ -27,7 +27,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
         [SerializeField] private GameObject destroy2;
 
         [SerializeField] private GameObject startCamGameObject;
-        [SerializeField] private CinemachineVirtualCamera startCamVc;
+        [SerializeField] private GameObject timeline;
 
         private int currentCharacterIndex = 0;
         private List<GameObject> characterInstances = new List<GameObject>();
@@ -35,7 +35,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
         void Start()
         {
             startCamGameObject = GameObject.FindGameObjectWithTag("StartCam");
-            startCamVc = startCamGameObject.GetComponent<CinemachineVirtualCamera>();
+            
             Debug.Log("PlayerController Start: " + netId + " isLocalPlayer: " + isLocalPlayer);
             if (isLocalPlayer)
             {
@@ -47,7 +47,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
         public override void OnStartClient()
         {
-            StartCoroutine(StartGame());
+            startCamGameObject.SetActive(false);
             if (characterPreviewParent.childCount == 0)
             {
                 foreach (var character in characters)
@@ -83,8 +83,8 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
         public void Select()
         {
             
-                CmdCreateCharacter(currentCharacterIndex);
-                characterSelectDisplay.SetActive(false);
+            CmdCreateCharacter(currentCharacterIndex);
+            characterSelectDisplay.SetActive(false);
             
         }
 
@@ -94,6 +94,8 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
             GameObject characterInstance = Instantiate(characters[characterIndex].GameplayCharacterPrefab);
             NetworkServer.Spawn(characterInstance, sender);
             NetworkServer.AddPlayerForConnection(sender, characterInstance);
+            StartCoroutine(StartGame());
+            
         }
 
         public void Right()
@@ -122,7 +124,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
         private IEnumerator StartGame()
         {
-            startCamGameObject.SetActive(false);
+            timeline.SetActive(true);
             yield return new WaitForSeconds(5);
         }
     }
