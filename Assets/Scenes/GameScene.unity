@@ -21746,7 +21746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1170229434}
-  m_PathPosition: 0.3797063
+  m_PathPosition: 0.226634
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: -6.67}
   m_XDamping: 0
@@ -34462,11 +34462,11 @@ MonoBehaviour:
     roll: 0
   - position: {x: 208.89447, y: 11.243245, z: 103.01627}
     roll: 0
-  - position: {x: 211.10654, y: 18.16788, z: 94.77287}
+  - position: {x: 210.5249, y: 18.19194, z: 93.23225}
     roll: 0
-  - position: {x: 212.13171, y: 21.659748, z: 84.02285}
+  - position: {x: 212.1279, y: 16.83163, z: 83.27541}
     roll: 0
-  - position: {x: 211.14166, y: 6.6638618, z: 74.00353}
+  - position: {x: 211.8669, y: 17.86664, z: 68.96252}
     roll: -1.55
   - position: {x: 211.94394, y: 15.853277, z: 53.142}
     roll: -3.1
@@ -34490,21 +34490,23 @@ MonoBehaviour:
     roll: 0
   - position: {x: 106.6728, y: 7.612149, z: -31.74331}
     roll: 0
-  - position: {x: 91.94614, y: 8.283759, z: -25.16786}
+  - position: {x: 91.94775, y: 10.35442, z: -24.84731}
     roll: 0
   - position: {x: 80.58446, y: 18.20966, z: -20.72201}
     roll: 0
-  - position: {x: 71.64524, y: 27.30565, z: -16.90226}
+  - position: {x: 73.6659, y: 23.5505, z: -18.26378}
     roll: 0
-  - position: {x: 61.14586, y: 16.52401, z: -14.82996}
+  - position: {x: 66.74408, y: 20.37398, z: -16.39119}
     roll: -20.26
-  - position: {x: 45.96262, y: 15.49511, z: -9.500502}
+  - position: {x: 56.54185, y: 18.47219, z: -12.54185}
+    roll: -10.13
+  - position: {x: 45.96524, y: 18.84313, z: -8.982207}
     roll: 0
   - position: {x: 32.65881, y: 14.83576, z: -9.2198}
     roll: 0
   - position: {x: 19.355, y: 10.30296, z: -9.538738}
     roll: 0
-  - position: {x: 5.379906, y: 4.174118, z: -11.89945}
+  - position: {x: 9.978816, y: 5.712959, z: -13.26502}
     roll: 0
 --- !u!4 &1170229435
 Transform:
