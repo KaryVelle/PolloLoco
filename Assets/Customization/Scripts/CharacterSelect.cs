@@ -31,6 +31,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
         private int currentCharacterIndex = 0;
         private List<GameObject> characterInstances = new List<GameObject>();
+        
 
         void Start()
         {
@@ -82,10 +83,8 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
 
         public void Select()
         {
-            
             CmdCreateCharacter(currentCharacterIndex);
             characterSelectDisplay.SetActive(false);
-            
         }
 
         [Command(requiresAuthority = false)]
@@ -94,8 +93,6 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
             GameObject characterInstance = Instantiate(characters[characterIndex].GameplayCharacterPrefab);
             NetworkServer.Spawn(characterInstance, sender);
             NetworkServer.AddPlayerForConnection(sender, characterInstance);
-            StartCoroutine(StartGame());
-            
         }
 
         public void Right()
@@ -121,12 +118,7 @@ namespace DapperDino.Mirror.Tutorials.CharacterSelection
             characterInstances[currentCharacterIndex].SetActive(true);
             characterNameText.text = characters[currentCharacterIndex].CharacterName;
         }
-
-        private IEnumerator StartGame()
-        {
-            timeline.SetActive(true);
-            yield return new WaitForSeconds(5);
-        }
+        
     }
 }
 

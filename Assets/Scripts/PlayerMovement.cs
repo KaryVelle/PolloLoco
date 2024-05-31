@@ -76,6 +76,7 @@ namespace StarterAssets
         public bool LockCameraPosition = false;
 
         public LobbyPOs lobby;
+       
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -133,6 +134,7 @@ namespace StarterAssets
             }
             _controller = GetComponent<CharacterController>();
             _playerInput = GetComponent<PlayerInput>();
+            lobby = FindObjectOfType<LobbyPOs>();
         }
 
         public override void OnStartLocalPlayer()
@@ -148,6 +150,9 @@ namespace StarterAssets
         public override void OnStartAuthority()
         {
             base.OnStartAuthority();
+            _controller.enabled = false;
+            //Move
+            lobby.MovePLayer(gameObject);
             _playerInput.enabled = true;
             _controller.enabled = true;
             GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
@@ -158,7 +163,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-
+           
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();

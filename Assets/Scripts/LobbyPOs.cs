@@ -2,23 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using TMPro;
+using UnityEngine.UI;
 
 public class LobbyPOs : NetworkBehaviour
 {
-    public GameObject[] players;
+    public GameObject[] players = new GameObject[3]; // Inicializa el array con tamaño 3
     public Transform[] polloPosition;
     public NetworkManager nm;
-
     [SyncVar]
     public int polloOcup = 0;
 
+    [SerializeField] private TextMeshProUGUI tmp;
+    [SerializeField] private GameObject canvasWood;
+
+    [SerializeField] private GameObject fences;
+    [SerializeField] private bool isready;
+
     private void Start()
     {
+        isready = true;
         nm = FindObjectOfType<NetworkManager>();
     }
+
     private void Update()
     {
-        polloOcup = nm.players;
+        if (!isServer) return; // Solo el servidor debe ejecutar esta lógica
+
+        polloOcup = nm.numPlayers; // Asegúrate de actualizar esto correctamente
+
+        if (polloOcup >= 2 && isready)
+        {
+            isready = false;
+            RpcActivateCanvasAndStartPollosRun();
+        }
     }
 
     public void MovePLayer(GameObject player)
@@ -28,8 +45,36 @@ public class LobbyPOs : NetworkBehaviour
 
     public void AddPlayer(GameObject player)
     {
-        // A�ade el jugador al arreglo de jugadores y actualiza su posici�n
+        // Añade el jugador al arreglo de jugadores y actualiza su posición
         players[polloOcup] = player;
         MovePLayer(player);
+    }
+
+    [ClientRpc]
+    void RpcDebugCountdown(string number)
+    {
+        tmp.text = number;
+    }
+
+    [ClientRpc]
+    void RpcActivateCanvasAndStartPollosRun()
+    {
+        canvasWood.SetActive(true);
+        StartCoroutine(StartPollosRun());
+    }
+
+    IEnumerator StartPollosRun()
+    {
+        RpcDebugCountdown("3");
+        yield return new WaitForSeconds(1);
+        RpcDebugCountdown("2");
+        yield return new WaitForSeconds(1);
+        RpcDebugCountdown("1");
+        yield return new WaitForSeconds(1);
+        RpcDebugCountdown("START");
+        yield return new WaitForSeconds(1);
+        canvasWood.SetActive(false);
+        yield return new WaitForSeconds(2);
+        fences.SetActive(false);
     }
 }
