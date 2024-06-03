@@ -45,13 +45,7 @@ public class HandleWin : NetworkBehaviour
             characterController1.enabled = false;
             characterController1.gameObject.transform.position = firstPlaceTransform.position;
             characterController1.enabled = true;
-            var randomPlayer = GameObject.FindGameObjectWithTag("Player");
-            vc.Follow = randomPlayer.transform;
-            vc.LookAt = randomPlayer.transform;
-
-
         }
-
         if (winners.Count == 2)
         {
             var secondPlace = winners[1];
@@ -60,21 +54,7 @@ public class HandleWin : NetworkBehaviour
             characterController2.gameObject.transform.position = secondPlaceTransform.position;
             characterController2.enabled = true;
             vcPodium.SetActive(true);
-           
-           
         }
-
-       // if (winners.Count == 3)
-        //{
-         //   var thirdPlace = winners[2];
-         //   var characterController3 = thirdPlace.GetComponent<CharacterController>();
-         //   characterController3.enabled = false;
-        //    characterController3.gameObject.transform.position = thirdPlaceTransform.position;
-        //   characterController3.enabled = true;
-           
-           
-       // }
-
     }
 }
 

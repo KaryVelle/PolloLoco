@@ -27,15 +27,13 @@ public class GoalChecker : MonoBehaviour
             _checker.currentPointLoad == currentTransform)
         {
            CountLaps();
-           Debug.Log("Meta");
         }
     }
 
     private void CountLaps()
     {
         laps += 1;
-        Debug.Log(laps);
-        if (laps == 1)
+        if (laps == 2)
         {
            handleWin.GetWinners(gameObject);
         }

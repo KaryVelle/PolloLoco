@@ -18,6 +18,7 @@ public class LobbyPOs : NetworkBehaviour
 
     [SerializeField] private GameObject fences;
     [SerializeField] private bool isready;
+    [SerializeField] private AudioSource chickenGoSound;
 
     private void Start()
     {
@@ -65,16 +66,12 @@ public class LobbyPOs : NetworkBehaviour
 
     IEnumerator StartPollosRun()
     {
-        RpcDebugCountdown("3");
-        yield return new WaitForSeconds(1);
-        RpcDebugCountdown("2");
-        yield return new WaitForSeconds(1);
-        RpcDebugCountdown("1");
-        yield return new WaitForSeconds(1);
-        RpcDebugCountdown("START");
-        yield return new WaitForSeconds(1);
+        RpcDebugCountdown("Ready?");
+        yield return new WaitForSeconds(3);
         canvasWood.SetActive(false);
         yield return new WaitForSeconds(2);
+        chickenGoSound.Play();
+        yield return new WaitForSeconds(0.3f);
         fences.SetActive(false);
     }
 }

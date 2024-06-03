@@ -188,7 +188,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
         }
-
+        
         private void LateUpdate()
         {
             if (!isLocalPlayer) return;
