@@ -6,12 +6,12 @@ using UnityEngine;
 public class CheckChecker : CheckpointCheckerClass
 {
     [SerializeField] private GoalChecker _goalChecker;
-
+    
     private void Start()
     {
         _goalChecker = GetComponent<GoalChecker>();
     }
-
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Checkpoint") || other.CompareTag("Checkpoint7")|| (other.CompareTag("Goal")))
@@ -35,4 +35,5 @@ public class CheckChecker : CheckpointCheckerClass
             }
         }
     }
+    
 }

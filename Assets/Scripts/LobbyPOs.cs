@@ -20,6 +20,9 @@ public class LobbyPOs : NetworkBehaviour
     [SerializeField] private bool isready;
     [SerializeField] private AudioSource chickenGoSound;
 
+    [SerializeField] private GameObject uiMusic;
+    [SerializeField] private GameObject gameplayMusic;
+
     private void Start()
     {
         isready = true;
@@ -67,11 +70,12 @@ public class LobbyPOs : NetworkBehaviour
     IEnumerator StartPollosRun()
     {
         RpcDebugCountdown("Ready?");
+        uiMusic.SetActive(false);
         yield return new WaitForSeconds(3);
         canvasWood.SetActive(false);
         yield return new WaitForSeconds(2);
-        chickenGoSound.Play();
         yield return new WaitForSeconds(0.3f);
         fences.SetActive(false);
+        gameplayMusic.SetActive(true);
     }
 }

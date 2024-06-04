@@ -21,11 +21,10 @@ public class HandleWin : NetworkBehaviour
     public override void OnStartAuthority()
     {
         vcPodium = GameObject.FindGameObjectWithTag("PodiumCam");
-        _virtualCameraGameObject = GameObject.FindGameObjectWithTag("PlayerFollowCamera");
-        vc = _virtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+        vc = GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>();
+       
         firstPlaceTransform = GameObject.FindGameObjectWithTag("FirstPlace").transform;
         secondPlaceTransform = GameObject.FindGameObjectWithTag("SecondPlace").transform;
-        thirdPlaceTransform = GameObject.FindGameObjectWithTag("ThirdPlace").transform;
     }
 
     public override void OnStartServer()
@@ -45,6 +44,8 @@ public class HandleWin : NetworkBehaviour
             characterController1.enabled = false;
             characterController1.gameObject.transform.position = firstPlaceTransform.position;
             characterController1.enabled = true;
+            
+            
         }
         if (winners.Count == 2)
         {

@@ -17,6 +17,9 @@ TagManager:
   - PodiumCam
   - Destroy
   - StartCam
+  - Confetti
+  - Confetti1
+  - pkah
   layers:
   - Default
   - TransparentFX

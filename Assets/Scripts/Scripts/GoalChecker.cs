@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GoalChecker : MonoBehaviour
 {
+    public ParticleSystem confetti;
     private CheckChecker _checker;
     [SerializeField] private Transform lastPointTransform;
     [SerializeField] private Transform currentTransform;
@@ -15,6 +16,7 @@ public class GoalChecker : MonoBehaviour
 
     private void Start()
     {
+        confetti = GameObject.FindGameObjectWithTag("Confetti1").GetComponent<ParticleSystem>();
         lastPointTransform = GameObject.FindGameObjectWithTag("Checkpoint7").transform;
         currentTransform = GameObject.FindGameObjectWithTag("Goal").transform;
         _checker = GetComponent<CheckChecker>();
@@ -33,9 +35,10 @@ public class GoalChecker : MonoBehaviour
     private void CountLaps()
     {
         laps += 1;
-        if (laps == 2)
+        if (laps == 1)
         {
            handleWin.GetWinners(gameObject);
+           confetti.Play();
         }
     }
     
